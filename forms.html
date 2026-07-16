@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <h3>Authentication Form</h3>
+    <form action="#" method="post">
+        <label for="txtUsername">Username:</label> 
+        <input type="text" id ="txtUsername" name="txtUsername" placeholder="ชื่อผู้ใช้" required><br><br> <!-- placeholder : คำใบ้ที่ต้องกรอก  -->
+        <label for="txtPassword">Password:</label>
+        <input type="password" id="txtPassword" name="txtPassword"  placeholder="รหัสผ่าน" required><br><br>
+        <input type="submit" value="Login"> <input type="reset" value="Cancel"> <!-- reset : ล้างข้อมูลที่กรอก -->
+    </form>
+    <h3>Input Type Examples</h3>
+    <form action="#" method="post">
+        <!-- Name -->
+        <label for="txtName">Name:</label>
+        <input type="text" id="txtName" name="txtName" placeholder="ชื่อ-นามสกุล" required><br><br>
+                                                                       <!-- ถ้าเป็น Disable จะกรอกไม่ได้ -->
+        <!-- Password -->
+        <label for="txtPassword">Password:</label>
+        <input type="password" id="txtPassword" name="txtPassword" placeholder="รหัสผ่าน" required><br><br>
+        <!-- Email -->
+        <label for="txtEmail">Email:</label>
+        <input type="email" id="txtEmail" name="txtEmail" placeholder="อีเมลล์" required><br><br>
+        <!-- Tel -->
+        <label for="txtTel">Tel:</label>
+        <input type="tel" id="txtTel" name="txtTel" placeholder="เบอร์โทรศัพท์" required><br><br>
+        <!-- Date -->
+        <label for="txtDate">Date:</label>
+        <input type="date" id="txtDate" name="txtDate" required> <br><br>
+        <!-- Time -->
+        <label for="txtTime">Time:</label>
+        <input type="time" id="txtTime" name="txtTime" required><br><br>
+        <!-- Color -->
+        <label for="txtColor">Color:</label>
+        <input type="color" id="txtColor" name="txtColor" required><br><br>
+        <!-- Hidden -->
+        <input type="hidden" id="txtHidden" name="txtHidden" value="Hidden Value"><br><br>
+        <!-- Meal type = checkbox เลือกได้หลายอัน-->
+        <label for="txtmeal">Meal:</label>
+        <input type="checkbox" id="txtmeal" name="txtmeal" value="Breakfast" required> Breakfast
+        <input type="checkbox" id="txtmeal" name="txtmeal" value="Lunch" required> Lunch
+        <input type="checkbox" id="txtmeal" name="txtmeal" value="Dinner" required> Dinner<br><br>
+        <!-- RdoMeal type = radio เลือกได้อันเดียว--> 
+        <label for="Rdomeal">Meal:</label>
+        <input type="radio" id="Rdomeal" name="Rdomeal" value="Breakfast" required> Breakfast
+        <input type="radio" id="Rdomeal" name="Rdomeal" value="Lunch" required> Lunch
+        <input type="radio" id="Rdomeal" name="Rdomeal" value="Dinner" required> Dinner<br><br>
+        <!-- Select -->
+        <select name="SelMeal" id="SelMeal" required>
+            <option value="">Select Meal</option>
+            <option value="Breakfast">Breakfast</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Dinner">Dinner</option>
+        </select><br><br>
+        <!-- File -->
+        <label for = "txtFile">File:</label>
+        <input type="file" id="txtFile" name="txtFile" required><br><br>
+        <!-- txtTextarea -->
+        <label for="txtTextarea">Message:</label><br>
+        <textarea id="txtTextarea" name="txtTextarea" rows="6" cols="50" placeholder="ข้อความ" required></textarea><br><br>
+        <!-- Button -->
+        <input type="submit" value="Submit">
+        <input type="reset" value="Cancel">
+    </form>
+</body>
+</html>
