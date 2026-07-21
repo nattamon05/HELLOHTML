@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form  action="#" method="post">
+    <fieldset>
+        <!-- หัวข้อ  ( legend ไม่ได้บังคับ ) -->
+        <legend>Personal Information</legend>
+        <!--หัวข้อย่อย -->
+        <label for="name">Name:</label> 
+        <!-- ชนิดข้อมูล maxlength ไม่เกิน 50 ตัวอักษร -->
+        <!--max/min length ต่างกัน max/min ปกติเพราะคนละชนิดข้อมูล-->
+        <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            required 
+            maxlength="50"> 
+        <br><br>
+        <label for="email">Email:</label>
+        <input 
+            type="email" 
+            id="email" 
+            name="email">
+        <label for="salary">Salary:</label>
+        <!-- ชนิดข้อมูล min 0, max 1000000, step 1000  คือไม่น้อยกว่า 0 ไม่เกิน 1000000 และขึ้นไปครั้งละ 1000-->
+        <input 
+            type="number" 
+            id="salary" 
+            name="salary" 
+            required
+            min="0" 
+            max="1000000" 
+            step="1000"> 
+        <br><br>
+        <label for="nation-id">NationID: </label>
+        <input 
+            type="text" 
+            id="nation-id" 
+            name="nation-id" 
+            required 
+            maxlength="13" 
+            pattern="[0-9]{13}" 
+            title="กรุณากรอกหมายเลขบัตรประชาชน 13 หลัก" 
+            placeholder="กรอกหมายเลขบัตรประชาชน">
+    
+    </fieldset>
+
+    <fieldset> 
+        <legend>Contact Information</legend>
+        <label for="phone">Phone:</label>
+        <input 
+            type="tel" 
+            id="phone" 
+            name="phone"> 
+    </fieldset>
+<input type = "submit" value = "Submit">
+<input type = "reset" value = "Cancle">
+
+</form>
+</body>
+</html>
