@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<body>
+    <header>
+        <h1>Registration Form</h1>
+    </header>
+    
+    <form action = "#" method="post">
+    <main>
+        <fieldset>
+        <legend>Personal Information </legend>
+
+            <label for="firstname">Name :</label>
+            <input 
+                type = "text"
+                id = "firstname"
+                name = "firstname"
+                required
+                maxlength ="50"
+                placeholder =" First Name" 
+                >
+            <!-- aria-label = ป้ายกำกับล่องหน -->
+            <input
+                type = "text"
+                id = "lastname"
+                name = "lastname"
+                required
+                maxlength="50"
+                placeholder =" Last Name"
+                aria-label ="Last Name"
+                >
+                <br> <br>
+            <label for ="email">Email:</label>
+            <input
+                type ="email"
+                id = "email"
+                name = "email"
+                required
+                maxlength="50"
+                placeholder=" example@gmail.com"
+                >
+            <br><br>
+            <label for ="phone">Phone :</label>
+            <input  
+                type ="tel"
+                id = "phone"
+                name = "phone"
+                required
+                pattern ="[0-9]{10}"
+                maxlength="10"
+                title="กรุณากรอกเบอร์โทรศัพท์ 10 หลัก"
+                placeholder=" กรอกหมายเลขโทรศัพท์"
+                >
+                <br> <br>
+            <label for="nation-id">NationID: </label>
+            <input 
+                type ="text" 
+                id ="nation-id" 
+                name ="nation-id" 
+                required 
+                maxlength ="13" 
+                pattern ="[0-9]{13}" 
+                title ="กรุณากรอกหมายเลขบัตรประชาชน 13 หลัก" 
+                placeholder =" กรอกหมายเลขบัตรประชาชน">
+                <br> <br>
+
+            <label for="address">Address</label>
+            <textarea
+                id ="address"
+                name = "address"
+                required
+                rows = "6"
+                cols = "50"
+                title ="กรุณากรอกที่อยู่"
+                placeholder= " กรอกที่อยู่"
+                >
+                </textarea>   
+
+
+
+                <br> <br>
+        <!-- input ขึ้นก่อนเพราะจะให้ปุ่มไปอยู่ทางซ้าย -->
+        <input 
+            type ="radio"
+            id ="gender-male"
+            name ="gender"
+            value="male"
+            required
+        >
+        <label for ="gender-male">Male</label>
+
+        <input
+            type ="radio"
+            id = "gender-female"
+            name = "gender"
+            value ="female"
+            required
+        >
+        <label for ="gender-female">Female</label>
+            <br> <br>
+
+        <input 
+            type ="submit"
+            value ="Submit"
+
+        >
+        <input  
+            type ="reset"
+            value="Cancel"
+        >
+    </fieldset>
+    </main>
+
+    <nav>
+            <ul>
+
+                <li><a href ="Aboutme.html" target ="_blank">Aboutme</a></li>
+                <li><a href ="forms.html" target ="_blank">Form</a></li>
+                <li><a href ="forms-2.html" target ="_blank">Form-2</a></li>
+                <li><a href ="week3-Lab-Submission.html" target ="_blank">Week 3 Lab Submission</a></li>
+                <li><a href ="https://github.com/nattamon05/HELLOHTML" target ="_blank">My Github</a></li>
+                <li><a href ="Registration.html" target ="_blank">Registration</a></li>
+
+
+            </ul>
+        </nav>
+
+<footer>
+    <p>&copy; 2026 My Webpage , All rights reserved.</p>
+</footer>
+
+
+ <!-- โครงสร้างแบบ Semantic : ครบ <header> , <nav> , <main> , <footer> -->
+ <!-- Fields 6 ช่องขึ้นไป : ครบ text,email,tel,radio -->
+ <!-- มีกลุ่ม <fieldset> + <legend> -->
+ <!-- ใช้งาน Validation Attributes : required , pattern , maxlenght , title , placeholder -->
+ <!-- ผ่านการตรวจสอบมาตรฐาน W3C  -->
+ <!-- อธิบายว่าระบบ AI ตรวจพบแจ้งเตือนปัญหาอะไรบ้าง ปัญหาการเข้าถึง (Accessibility):
+
+ปัญหา: ช่อง Last Name ถูกจัดกลุ่มภายใต้หัวข้อรวม "Name :" โดยไม่มีแท็ก <label> แยกเดี่ยวๆ ซึ่งอาจทำให้โปรแกรมอ่านหน้าจอของระบบช่วยเหลือผู้พิการทางสายตาอ่านค่าข้ามไป
+
+การแก้ไข: เพิ่มแอตทริบิวต์ aria-label="Last Name" เข้าไปในตัว <input> โดยตรง เพื่อทำหน้าที่เป็นป้ายกำกับทางเทคนิคสำหรับ AI และ Screen Reader โดยที่หน้าตาเว็บจริงยังคงรูปแบบตามดีไซน์เดิม -->
+</form>
+</body>
+</html>
