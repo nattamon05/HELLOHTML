@@ -3,36 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Us</title>
 </head>
 <body>
-    <header>
-        <h3>Contact Page</h3>
-        <nav>
+    <header> <!-- header คือส่วนหัวของหน้าเว็บ เป็นตัวบอกความหมาย -->
+        <h1>Contact Page</h1>
+        <nav> <!-- nav คือ navigation bar เป็นแถบนำทาง -->
             <ul>
-                <li><a href="home">Home</a></li>           
-                <li><a href="contact">Week 2</a></li>
+                <li><a href="Aboutme.html">Home</a></li>           
+                <li><a href="forms.html">Week 2</a></li>
             </ul>    
         </nav>
     </header>
-<main>
-    <section id="contact">
+<main> <!-- main คือส่วนหลักของหน้าเว็บ เป็นตัวบอกความหมาย -->
+    <section id="contact"> <!-- section คือส่วนของเนื้อหา เป็นตัวบอกความหมาย -->
         <h2>Contact Us</h2>
         <p>Please fill out the form below to get in touch with us:</p>
-        <form action="#" method=""post">
+        <form action="#" method="post">
+
+            <!-- 1 -->
             <label for="name">Name:</label>
             <input 
                 type="text" 
                 id="name" 
                 name="name"
-                required >
+                required
+                maxlength="50">
                 <br><br>
+            <!-- 2 -->   
             <label for="email">Email:</label>
             <input 
                 type="email" 
                 id="email" 
-                name="email">
+                name="email"
+                required 
+                maxlength="100">
                 <br><br>       
+            <!-- 3 -->    
             <label for="phone">Phone:</label>
             <input 
                 type="tel" 
@@ -41,26 +48,44 @@
                 required 
                 pattern ="[0-9]{10}"
                 maxlength="10"
-                title="Please enter a valid"> 
+                title="Please enter a valid 10-digit phone number"> 
                 <br><br>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea><br><br>
-        <fieldset>
-            <legend>Preferred Contach Method</legend>
+            <!-- 4 -->
+            <label for="age">Age (18-99):</label>
+            <input 
+                 type="number" 
+                 id="age" 
+                 name="age" 
+                 required
+                 min="18" 
+                 max="99"
+                 title="Please enter a valid age between 18 and 99">
+                <br><br>
+            <!-- 5 -->
+              <label for="message">Message:</label>
+            <textarea 
+                id="message" 
+                name="message" 
+                required>
+            </textarea>
+            <br><br>
+
+        <fieldset> <!--fieldset คือกลุ่มของ input ที่เกี่ยวข้องกัน -->
+            <legend>Preferred Contact Method</legend> <!-- legend คือหัวข้อของ fieldset    --> 
             <input 
                 type="radio" 
-                id="email" 
+                id="contact-email" 
                 name="contact-method" 
                 value="email" checked>
-            <label for="email">Email</label><br>
+            <label for="contact-email">Email</label><br>
             <input 
                 type="radio" 
-                id="phone" 
+                id="contact-phone" 
                 name="contact-method" 
                 value="phone">
-            <label for="phone">Phone</label><br>
+            <label for="contact-phone">Phone</label><br>
         </fieldset> 
-        
+
         <input type="submit" value="Submit">
         <input type="reset" value="Cancel">
         
@@ -68,7 +93,20 @@
    </section>
 </main>
 
+<br><br><br>
 
+<footer> <!-- footer คือส่วนท้ายของหน้าเว็บ  -->
+    <p>&copy; 2026 My Website. All rights reserved.</p>
+</footer>
+
+
+<!-- ผลทดสอบลำดับการทำงานเมื่อกดปุ่ม Tab : 
+    Home > Week 2 > Name > Email > Phone > Age > Message > Contact Method 
+    Submit > Cancel -->
+
+<!-- อธิบายปัญหาในแต่ละจุด  1: แก้ปัญหา id ซ้ำกัน 2: แก้ชื่อหน้าเว็บในแท็ก 3: เติมข้อความแจ้งเตือน title ให้จบประโยค-->
+
+<!-- RUM W3C ผ่าน 100% -->
 
 </body>
 </html>
